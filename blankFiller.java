@@ -16,7 +16,6 @@ public class BlankFiller {
 
 	/**
 	 * @param args
-	 * @throws IOException 
 	 */
 	public static void main(String[] args) {
 		boolean iFound=false;
