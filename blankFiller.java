@@ -1,17 +1,18 @@
 /**
  * 
  */
-package selector;
+package blankfiller;
 
 import java.io.*;
 import java.util.Scanner;
 
 /**
  * Go through a file full of numbers, and for each number that is NOT there, print a specified line containing that number.
+ * Originally designed for updating the config.xml of the Office Proofing Tools installer to reduce extraneous installations.
  * @author zschuetz
  * @created 2017.05.19 zschuetz
  */
-public class Selector {
+public class BlankFiller {
 
 	/**
 	 * @param args
@@ -25,7 +26,7 @@ public class Selector {
 			String content = new Scanner(f).useDelimiter("\\Z").next();
 			
 			//print lines that aren't there
-			for (int i=2100; i<3100; i++) {
+			for (int i=1025; i<2100; i++) {
 				numSought=String.valueOf(i);
 				//check if it's in there somewhere
 				iFound=content.contains(numSought);
