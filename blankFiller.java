@@ -27,11 +27,14 @@ public class BlankFiller {
 			
 			//print lines that aren't there
 			for (int i=1025; i<2100; i++) {
+				boolean localDebug=false;
 				numSought=String.valueOf(i);
 				//check if it's in there somewhere
 				iFound=content.contains(numSought);
-//				if (iFound) {System.out.println("here's one");}
-				//add it if it's not
+				if (localDebug) {
+					if (iFound) {System.out.println("here's one");}					
+				}
+				//skip it if it is, add it if it's not
 				if (iFound==false) {
 					System.out.println("    <OptionState Id=\"ProofingTools_"+i+"\" State=\"Absent\" Children=\"force\"/>");
 				}
